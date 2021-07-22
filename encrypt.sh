@@ -14,15 +14,13 @@ then
     gpg -c $filename    
     rm -r $filename # removes the original unencrypted file
     echo "$filename has been encrypted."
-elif
+else
     echo "You have selected to decrypt a file."
     echo "Please enter a filename:"
     read filename2;
     gpg -d $filename2
     rm -r $filename2 # removes the original encrypted file
     echo "$filename2 has been decrypted."
-else
-    echo "That is not a valid option. Please select an option."
 fi
 
 done
